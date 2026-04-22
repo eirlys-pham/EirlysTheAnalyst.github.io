@@ -11,6 +11,36 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Fix chiều cao đồng đều cho tất cả grid cards */
+			.posts article .image.fit {
+				height: 260px;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: #f5f5f5;
+			}
+
+			.posts article .image.fit img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center center;
+				display: block;
+			}
+
+			.posts article .image.fit img[src*="auto"] {
+				object-fit: contain;
+				background: #111;
+				padding: 10px;
+			}
+
+			/* Thu nhỏ khoảng cách giữa các mục trong footer contact */
+			#footer .split.contact section {
+				padding: 1.5rem 0;  /* giảm xuống, mặc định thường là 3rem */
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -21,7 +51,8 @@
 					<div id="intro">
 						<h1>Eirlys<br />
 						The Analyst Portfolio</h1>
-						<p>Data Analyst skilled in SQL, Tableau, and Python <a href="https://www.linkedin.com/in/nhungphamthi/">@Eirlys</a>.</p>
+						<p>Specializing in behavioral analytics, event tracking, and SQL-based funnel analysis.<br />
+						Background in Mathematics & Computer Science ·<br /> <a href="https://www.linkedin.com/in/nhungphamthi/">@Eirlys</a>.</p>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -49,58 +80,87 @@
 					<div id="main">
 
 						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<!--span class="date">April 25, 2017</span -->
-									<h2><a href="https://github.com/eirlys-pham/PortfolioProjects/tree/main/SQLDataCleaning">DATA CLEANING<br />
-									IN SQL</a></h2>
-									<p>In this project we clean housing data in PostgreSQL.</p>
-								</header>
-								<a href="https://github.com/eirlys-pham/PortfolioProjects/tree/main/SQLDataCleaning" class="image main"><img src="images/housing.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/eirlys-pham/PortfolioProjects/tree/main/SQLDataCleaning" class="button large">View Project</a></li>
-								</ul>
-							</article>
 
 						<!-- Posts -->
 							<section class="posts">
 								<article>
 									<header>
-										<!-- <span class="date">April 24, 2017</span> -->
-										<h2><a href="https://github.com/eirlys-pham/PortfolioProjects/tree/main/SQLDataExploration">Data Exploration <br />
+										<span class="date">Python · Claude AI · n8n · Trino SQL · 2026</span>
+										<h2><a href="https://github.com/eirlys-pham/data-analytics-automation">AI-Assisted Analytics<br />
+										Automation</a></h2>
+									</header>
+									<!-- Add your chart: images/sentiment.png -->
+									<a href="https://github.com/eirlys-pham/data-analytics-automation" class="image main">
+										<img src="images/auto.png" alt="AI-Assisted Analytics Automation" />
+									</a>
+									<p>An AI-powered analytics framework that reads structured business context
+										— data dictionary, SQL conventions, OA flow definitions — and automatically
+										generates production-ready <strong>Trino SQL</strong> for funnel drop-off
+										and error analysis. Built during an internship at VPS Securities to eliminate
+										repetitive manual query writing across recurring analytics problems.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/eirlys-pham/data-analytics-automation" class="button large">View Project</a></li>
+									</ul>
+								</article>
+								
+								<!-- Project 2: Sentiment Analysis -->
+								<article>
+									<header>
+										<span class="date">Python · NLP · Power BI · 2026</span>
+										<h2><a href="https://github.com/eirlys-pham/vietnam-stock-app-sentiment">Vietnam Stock App<br />
+										Sentiment Analysis</a></h2>
+									</header>
+									<!-- Add your chart: images/sentiment.png -->
+									<a href="https://github.com/eirlys-pham/vietnam-stock-app-sentiment" class="image fit">
+										<img src="images/sentiment.png" alt="Vietnam Stock App Sentiment Analysis" />
+									</a>
+									<p>Scraped and analyzed <strong>4,685 Google Play reviews</strong> across
+									4 fintech apps (VPS SmartOne, TCBS, MBS, DNSE). Built a keyword-based
+									topic classifier covering <strong>11 pain-point categories</strong> to
+									surface what users complain about most and provide per-app
+									product recommendations.</p>
+									<ul class="actions special">
+										<!-- Update this link after pushing to GitHub -->
+										<li><a href="https://github.com/eirlys-pham/vietnam-stock-app-sentiment" class="button">View Project</a></li>
+									</ul>
+								</article>
+
+								<!-- Project 3: Data Cleaning SQL -->
+								<article>
+									<header>
+										<span class="date">SQL · PostgreSQL</span>
+										<h2><a href="https://github.com/eirlys-pham/PortfolioProjects/tree/main/SQLDataCleaning">Data Cleaning<br />
 										in SQL</a></h2>
 									</header>
-									<a href="https://github.com/eirlys-pham/PortfolioProjects/tree/main/SQLDataExploration" class="image fit"><img src="images/covid.jpg" alt="" /></a>
-									<p>Data Exploration of Covid 19 Dataset in PostgreSQL.</p>
+									<a href="https://github.com/eirlys-pham/PortfolioProjects/tree/main/SQLDataCleaning" class="image fit">
+										<img src="images/housing.jpg" alt="Data Cleaning in SQL" />
+									</a>
+									<p>Cleaned and standardized a Nashville housing dataset in PostgreSQL —
+									handling null values, deduplication, address parsing, and column
+									normalization to prepare raw data for downstream analysis.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/eirlys-pham/PortfolioProjects/tree/main/SQLDataCleaning" class="button">View Project</a></li>
+									</ul>
+								</article>
+
+								<!-- Project 4: Data Exploration SQL -->
+								<article>
+									<header>
+										<span class="date">SQL · PostgreSQL</span>
+										<h2><a href="https://github.com/eirlys-pham/PortfolioProjects/tree/main/SQLDataExploration">Data Exploration<br />
+										in SQL</a></h2>
+									</header>
+									<a href="https://github.com/eirlys-pham/PortfolioProjects/tree/main/SQLDataExploration" class="image fit">
+										<img src="images/covid.jpg" alt="Data Exploration in SQL" />
+									</a>
+									<p>Explored the COVID-19 global dataset in PostgreSQL — analyzing
+									infection rates, death percentages, vaccination rollout, and
+									cross-country comparisons using CTEs, window functions, and
+									aggregate queries.</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/eirlys-pham/PortfolioProjects/tree/main/SQLDataExploration" class="button">View Project</a></li>
 									</ul>
 								</article>
-								<article>
-									<header>
-										<!-- <span class="date">April 22, 2017</span> -->
-										<h2><a href="https://public.tableau.com/app/profile/nhung.pham6255/vizzes">Tableau Projects<br />
-										</a></h2>
-									</header>
-									<a href="https://public.tableau.com/app/profile/nhung.pham6255/vizzes" class="image fit"><img src="images/tableau.png" alt="" /></a>
-									<p>This holds all of my Tableau Dashboards.</p>
-									<ul class="actions special">
-										<li><a href="https://public.tableau.com/app/profile/nhung.pham6255/vizzes" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<!-- <span class="date">April 18, 2017</span> -->
-										<h2><a href="https://github.com/eirlys-pham/PortfolioProjects/tree/main/PythonMovieCorrelation">Python Movie Correlation<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/eirlys-pham/PortfolioProjects/tree/main/PythonMovieCorrelation" class="image fit"><img src="images/python.png" alt="" /></a>
-									<p>Use Python to find correlations between variables.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/eirlys-pham/PortfolioProjects/tree/main/PythonMovieCorrelation" class="button">View Project</a></li>
-									</ul>
-								</article>
-								
 							</section>
 
 						<!-- Footer -->
@@ -122,7 +182,7 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<!-- <section>
+						<section>
 							<form method="post" action="#">
 								<div class="fields">
 									<div class="field">
@@ -142,12 +202,11 @@
 									<li><input type="submit" value="Send Message" /></li>
 								</ul>
 							</form>
-						</section> -->
+						</section>
 						<section class="split contact">
 							<section class="alt">
 								<h3>Location</h3>
-								<p>Hanoi, Vietnam<br />
-								Hoang Mai, Linh Dam</p>
+								<p>Hanoi, Vietnam</p>
 							</section>
 							<section>
 								<h3>Phone</h3>
@@ -168,9 +227,9 @@
 					</footer>
 
 				<!-- Copyright -->
-					<div id="copyright">
+					<!-- <div id="copyright">
 						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+					</div> -->
 
 			</div>
 
